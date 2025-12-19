@@ -1,5 +1,12 @@
 #!/bin/bash
 
-echo "Hello World" > /tmp/hello
 
-echo "set -o vi" >> $HOME/.bashrc
+# Error handling
+set -euo pipefail
+
+# Only run the script and apply if the chezmoi binary is not found (output is not 0)
+if ! command -v chezmoi >/dev/null; then
+    sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:lassebischoff/dotfiles-demo.git
+fi
+
+exit 0
