@@ -158,3 +158,6 @@ fi
 
 # Enable Vi mode 
 set -o vi
+
+# Activate mise
+eval "$(mise activate bash)"
