@@ -1,0 +1,41 @@
+" Disable compatibility with vi which can cause unexpected issues.
+set nocompatible
+
+" Enable type file detection. Vim will be able to try to detect the type of file in use.
+filetype on
+
+" Enable plugins and load plugin for the detected file type.
+filetype plugin on
+
+" Load an indent file for the detected file type.
+filetype indent on
+
+" Set the default indentation to 2 spaces for all files
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+
+" Needed for todo.txt
+syntax on
+
+" Add numbers to each line on the left-hand side.
+set number relativenumber
+
+" Colors
+colorscheme flexoki-dark
+
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
+set wildmenu
+
+let mapleader=" "
+
+" Set VimWiki to Markdown and set path
+let g:vimwiki_list = [{ 'syntax': 'markdown',
+					\ 'ext': 'md',
+					\ 'path': '~/0-para/2-areas/secondbrain/'}]
+
+" Highlight the current line
+set cursorline
