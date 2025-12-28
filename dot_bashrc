@@ -161,3 +161,7 @@ set -o vi
 
 # Activate mise
 eval "$(mise activate bash)"
+
+# Aliases
+alias ll="ls -alF"
+alias ls="ls --color=auto"
