@@ -1,3 +1,6 @@
 [tools]
 bat = "latest"
 chezmoi = "latest"
+flux2 = "latest"
+kubectl = "latest"
+direnv = "latest"
