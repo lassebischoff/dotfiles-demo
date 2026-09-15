@@ -1,0 +1,3 @@
+[tools]
+flux2 = "latest"
+kubectl = "latest"
