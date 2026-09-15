@@ -4,9 +4,11 @@
 # Error handling
 set -euo pipefail
 
+DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
+
 # Only run the script and apply if the chezmoi binary is not found (output is not 0)
 if ! command -v chezmoi >/dev/null; then
-    sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:lassebischoff/dotfiles-demo.git
+    sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply --source "$DOTFILES_DIR"
 fi
 
 sudo apt update && sudo apt install vim -y 
